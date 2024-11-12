@@ -1,0 +1,32 @@
+
+
+section{
+    overflow: hidden;
+}
+
+.station-a {
+    padding: 10px 30px;
+   width: 62%;
+   margin-left: 11%;
+   margin-top: 20px;
+   background-color: white;
+}
+
+.fa-circle{
+    color: #FF7F5C;
+    font-size: 10px;
+}
+.station-name{
+    overflow: auto;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.station-details p{
+font-size: 14px;
+font-weight: bold;
+}
+.station-a-entro{
+    border-bottom: 1px solid rgb(212, 210, 210);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}

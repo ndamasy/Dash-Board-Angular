@@ -1,0 +1,180 @@
+<main class="main-graph">
+    <div >
+
+
+          <nav class="pt-4">
+            <div class="nav-content d-flex justify-content-around align-items-center">
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-circle pt-4"></i>
+                <img class="ps-3" src="../../../assets/gas-station-svgrepo-com.svg" />
+                <span class="ps-3 fs-3">2/3</span>
+                <p class="ps-2 Monitored-Stations">
+                  Monitored <br />
+                  Stations
+                </p>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-circle"></i>
+               <img class="circular-arrow-with-dots ms-2 me-3" src="../../../assets/circular-arrow-with-dots.png">
+                <span class="fs-3">20s</span>
+                <p class="ps-2 last-update">
+                  Last <br />
+                  Update
+                </p>
+              </div>
+              <div class="days d-flex justify-content-between align-items-center">
+                <div class="today ps-5 pe-5 pt-2 pb-2 text-white">TODAY</div>
+                <div class="ysterday pe-3">YESTERDAY</div>
+                <div class="lastweek pe-5">LAST WEEK</div>
+              </div>
+              <div class="d-flex">
+                <i class="fa-solid fa-caret-right fs-4 pe-2"></i>
+                <div class="start-date d-flex">
+                  <p class="ps-2">Start date - time</p>
+                  <i class="fa-regular fa-calendar ps-5"></i>
+                </div>
+              </div>
+              <div class="d-flex">
+                <i class="fa-solid fa-square pe-2"></i>
+                <div class="end-date d-flex">
+                  <p class="ps-2">End date - time</p>
+                  <i class="fa-regular fa-calendar ps-5"></i>
+                </div>
+              </div>
+            </div>
+          </nav>
+        
+          <aside class="d-flex flex-column justify-content-around align-items-center">
+            <div>
+              <img src="../../../assets/PMS.svg" />
+            </div>
+            <div class="admin-icons d-flex flex-column justify-content-around">
+              <img src="../../../assets/control-room.svg" />
+              <img src="../../../assets/dashboard.svg" />
+              <img src="../../../assets/elements.svg" />
+              <img src="../../../assets/settings.svg" />
+              <img src="../../../assets/notifications.svg" />
+            </div>
+            <div>
+              <img class="logout" src="../../../assets/logout.svg" />
+            </div>
+          </aside>
+        
+          <div>
+            <div class="row rates">
+              <div class="col-lg-9 d-flex totals">
+                <div class="total-value">
+                  <h3>71,028 <small>EGP</small></h3>
+                  <p>Total Value</p>
+                  <span> <i class="fa-solid fa-caret-down"></i> 2%</span>
+                </div>
+                <div class="total-sale bg-white">
+                  <h3>20,000 <small>m²</small></h3>
+                  <p>Total Sales</p>
+                  <span> <i class="fa-solid fa-caret-up"></i> 50 m²</span>
+                </div>
+                <div class="avg-sale bg-white">
+                  <h3>20,000 <small>m²</small></h3>
+                  <p>Avg Sales</p>
+                  <span> <i class="fa-solid fa-caret-down"></i> 50 m²</span>
+                </div>
+        
+                <div class="total-count bg-white">
+                  <h3>1567</h3>
+                  <p>Total Transaction Count</p>
+                  <span> <i class="fa-solid fa-caret-up"></i> 20</span>
+                </div>
+              </div>
+        
+              <div class="col-lg-3  Hourly-Sales ">
+                <p>Hourly Sales</p>
+        
+                <img src="../../../assets/34.png" />
+                <p class="pt-4">Sales by Station</p>
+        
+                <div class="Sales-by-Station  ">
+                  <div class="station-1 d-flex justify-content-around align-items-center">
+                    <img  src="../../../assets/gas-station-svgrepo-com.svg" />
+                    <p>Station Name</p>
+                    <span class="">62,721m²</span>
+                  </div>
+                  <div class="rate-line">
+                    <div class="dark-rate"></div>
+                  </div>
+                  <div class="station-2 d-flex justify-content-evenly align-items-center">
+                    <img  src="../../../assets/gas-station-svgrepo-com.svg" />
+                    <p>Station Name</p>
+                    <span>62,721m²</span>
+                  </div>
+                  <div class="rate-line">
+                    <div class="dark-rate"></div>
+                  </div>
+                  <div class="station-3 d-flex justify-content-around align-items-center">
+                    <img  src="../../../assets/gas-station-svgrepo-com.svg" />
+                    <p>Station Name</p>
+                    <span>NM</span>
+                  </div>
+                  <div class="rate-line-blue">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+           
+              
+                <div class="d-flex justify-content-between  shuffel-btns bg-white ">
+                  <div   (click)="activateGraph() "  [class.active]="true"
+                    class="btn graph-btn graph-shuffel d-flex justify-content-center align-items-center ps-5  pe-5  pb-0"
+                  >
+                    <div class="d-flex graph-icon">
+                      <div class="larg"></div>
+                      <div class="med"></div>
+                      <div class="smal"></div>
+                    </div>
+                    <p class="ps-3 mt-2">GRAPH</p>
+                  </div>
+        
+                  <div  (click)="activateList()"  [class.active]="true"
+                    class="btn  list-btn graph-list d-flex justify-content-center ps-5 pe-5  pb-0"
+                  >
+                    <div class="rectangle-icon mt-1">
+                      <div class="mt-1"></div>
+                      <div class="mt-1"></div>
+                    </div>
+        
+                    <p class="ps-3 mt-2">List</p>
+                  </div>
+                </div>
+              
+            
+        
+        
+            <div [hidden]="showList"  class="row financial-graph bg-white rounded-4 ">
+        
+              <div class="pargraph-text d-flex justify-content-between">
+                <div class="pargraph-title">
+                  <p class="pt-5 ps-5">STATIONS ACTIVATES OVERVIEW</p>
+                </div>
+        
+                <div class="financial-categories d-flex pt-5 pe-5">
+                  <p class="sales">SALES</p>
+                  <p class="ps-3">TRANSACTION</p>
+                  <p class="ps-3">VALUE</p>
+                  <P class="ps-3">COMPRESSION</P>
+                </div>
+              </div>
+              <hr />
+              <div class="graph-chart"></div>
+        
+              
+            </div>
+        
+
+
+          </div>
+
+
+       <app-list [hidden]="showGraph"></app-list>
+    </div>
+</main>
